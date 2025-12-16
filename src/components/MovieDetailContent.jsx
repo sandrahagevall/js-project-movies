@@ -99,7 +99,7 @@ const Poster = styled.img`
   border: 5px solid white;
 
   @media (min-width: 768px){
-    width: 350px;
+    width: 380px;
   }
 `
 

@@ -107,7 +107,7 @@ export const Movies = () => {
           aria-label={`View details for ${movie.title}`}
         >
           <MovieImage
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
             alt={`Poster for ${movie.title}`}
             width="342"
             height="513"
