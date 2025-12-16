@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import styled from "styled-components"
+import { MovieDetailContent } from "../components/MovieDetailContent"
 
 
 export const MovieDetails = () => {
@@ -29,10 +29,8 @@ export const MovieDetails = () => {
   }
 
   return (
-    <div>
-      <h1>{movie.title}</h1>
-      <h2>{movie.overview}</h2>
-    </div>
+    <>
+      <MovieDetailContent movie={movie} />
+    </>
   )
-
 }

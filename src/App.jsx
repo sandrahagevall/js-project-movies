@@ -1,4 +1,3 @@
-import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Movies } from "./pages/Movies"
 import { MovieDetails } from "./pages/MovieDetails"

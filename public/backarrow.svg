@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <defs>
+    <mask id="arrow-cutout">
+      <rect width="36" height="36" fill="white"/>
+      <polyline
+        points="20 10 12 18 20 26"
+        stroke="black"
+        stroke-width="6"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </mask>
+  </defs>
+
+  <circle
+    cx="18"
+    cy="18"
+    r="18"
+    fill="white"
+    mask="url(#arrow-cutout)"
+  />
+</svg>
