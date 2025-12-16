@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { Loader } from "../components/Loader"
 import styled from "styled-components"
 
 const apiKey = import.meta.env.VITE_TMDB_API_KEY
@@ -64,16 +65,38 @@ const MovieImage = styled.img`
 
 export const Movies = () => {
   const [movies, setMovies] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
+    setLoading(true)
+    setError(null)
+
     fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
     )
-      .then(res => res.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`)
+        }
+        return response.json()
+      })
       .then(data => {
         setMovies(data.results)
       })
+      .catch(err => {
+        setError(err.message)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }, [])
+
+  if (loading) return <Loader />
+
+  if (error) {
+    return <p style={{ color: "white" }}>{error}</p>
+  }
 
   return (
     <PopularPage>
@@ -102,4 +125,4 @@ export const Movies = () => {
   )
 }
 
-export default Movies
+
