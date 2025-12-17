@@ -99,7 +99,11 @@ const Poster = styled.img`
   border: 5px solid white;
 
   @media (min-width: 768px){
-    width: 380px;
+    width: 300px;
+  }
+
+  @media (min-width: 1400px){
+    width: 350px;
   }
 `
 
@@ -109,18 +113,20 @@ const TextContent = styled.div`
   gap: 1rem;
   max-width: 400px;
   align-items: left;
-
-  @media (min-width: 768px) {
-    
-  }
 `
 
 const Title = styled.h1`
   font-size: 1.75rem;
+  text-shadow: 0 0 6px rgba(255,255,255,0.4);
+  
+  @media (min-width: 768px){
+    font-size: 2.2rem;
+  }
 `
 
 const Overview = styled.p`
   font-size: 1rem;
+  line-height: 1.5;
 `
 
 const Info = styled.div`

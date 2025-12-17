@@ -26,6 +26,7 @@ const Spinner = styled.div`
   animation: ${spin} 0.9s linear infinite;
 `
 
+
 export const Loader = () => {
   return (
     <LoaderWrapper>

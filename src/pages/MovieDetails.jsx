@@ -2,13 +2,14 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { MovieDetailContent } from "../components/MovieDetailContent"
 import { Loader } from "../components/Loader"
+import NotFound from "../pages/NotFound"
 
 
 export const MovieDetails = () => {
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState(false)
 
   const apiKey = import.meta.env.VITE_TMDB_API_KEY
 
@@ -19,15 +20,16 @@ export const MovieDetails = () => {
     const fetchMovieDetails = async () => {
       try {
         setLoading(true)
-        setError(null)
+        setError(false)
 
         const response = await fetch(API_URL)
-        if (!response.ok) throw new Error(`HTTP ${response.status}`)
+
+        if (!response.ok) throw new Error("Not found")
 
         const data = await response.json()
         setMovie(data)
-      } catch (err) {
-        setError(err.message)
+      } catch {
+        setError(true)
       } finally {
         setLoading(false)
       }
@@ -37,22 +39,10 @@ export const MovieDetails = () => {
   }, [id])
 
 
-  if (loading) {
-    return <Loader />
-  }
+  if (loading) return <Loader />
 
-  if (error) {
-    return (
-      <div style={{ color: "white", padding: "2rem" }}>
-        <h2>Something went wrong</h2>
-        <p>{error}</p>
-      </div>
-    )
-  }
+  if (error) return <NotFound />
 
-  if (!movie) {
-    return <p>Movie not found</p>
-  }
 
   return (
     <>
