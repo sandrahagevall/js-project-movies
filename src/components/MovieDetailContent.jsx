@@ -111,7 +111,6 @@ const TextContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 400px;
   align-items: left;
 `
 
@@ -125,6 +124,7 @@ const Title = styled.h1`
 `
 
 const Overview = styled.p`
+  max-width: 400px;
   font-size: 1rem;
   line-height: 1.5;
 `
