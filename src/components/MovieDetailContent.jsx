@@ -88,7 +88,6 @@ const ContentWrapper = styled.div`
   @media (min-width: 768px){
     flex-direction: row;
     align-items: flex-end;
-    justify-content: center;
     gap: 2rem;
     padding-bottom: 1rem;
   }
