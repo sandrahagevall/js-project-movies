@@ -11,7 +11,7 @@ export const MovieDetails = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
-  const apiKey = import.meta.env.VITE_TMDB_API_KEY
+  const apiKey = import.meta.env.VITE_TMDB_PUBLIC_KEY
 
   const API_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
 

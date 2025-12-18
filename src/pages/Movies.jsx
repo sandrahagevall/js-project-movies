@@ -4,7 +4,7 @@ import { MovieCard } from "../components/MovieCard"
 import styled from "styled-components"
 
 
-const apiKey = import.meta.env.VITE_TMDB_API_KEY
+const apiKey = import.meta.env.VITE_TMDB_PUBLIC_KEY
 
 const PopularPage = styled.main`
   display: flex;
