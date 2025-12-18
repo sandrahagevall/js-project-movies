@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import { Loader } from "../components/Loader"
 import { MovieCard } from "../components/MovieCard"
 import styled from "styled-components"
@@ -25,7 +24,7 @@ export const Movies = () => {
     )
       .then(response => {
         if (!response.ok) {
-          throw new Error(`HTTP ${response.status}`)
+          throw new Error(`Failed to fetch movies: ${response.status} ${response.statusText}`)
         }
         return response.json()
       })

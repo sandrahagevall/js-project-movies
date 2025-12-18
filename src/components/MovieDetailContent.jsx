@@ -144,33 +144,31 @@ export const MovieDetailContent = ({ movie }) => {
     : null
 
   return (
-    <>
-      <PageWrapper>
-        <BackLink to="/" aria-label="Back to movies">
-          <img
-            src="/backarrow.svg"
-            alt="Back"
-            width={24}
-            height={24}
-          />
-          Movies
-        </BackLink>
-        <Background $image={backdropUrl} />
-        <Overlay />
-        <DetailsContainer>
-          <ContentWrapper>
-            <Poster src={posterUrl} alt={`Poster for ${movie.title}`} />
-            <TextContent>
-              <Title>{movie.title}</Title>
-              <Overview>{movie.overview}</Overview>
-              <Info>
-                <p><strong>Rating:</strong> {movie.vote_average.toFixed(1)} / 10 ⭐</p>
-              </Info>
-            </TextContent>
-          </ContentWrapper>
-        </DetailsContainer>
-      </PageWrapper>
-    </>
+    <PageWrapper>
+      <BackLink to="/" aria-label="Back to movies">
+        <img
+          src="/backarrow.svg"
+          alt="Back"
+          width={24}
+          height={24}
+        />
+        Movies
+      </BackLink>
+      <Background $image={backdropUrl} />
+      <Overlay />
+      <DetailsContainer>
+        <ContentWrapper>
+          <Poster src={posterUrl} alt={`Poster for ${movie.title}`} />
+          <TextContent>
+            <Title>{movie.title}</Title>
+            <Overview>{movie.overview}</Overview>
+            <Info>
+              <p><strong>Rating:</strong> {movie.vote_average.toFixed(1)} / 10 ⭐</p>
+            </Info>
+          </TextContent>
+        </ContentWrapper>
+      </DetailsContainer>
+    </PageWrapper>
   )
 }
 

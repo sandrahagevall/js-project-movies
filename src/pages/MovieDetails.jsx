@@ -45,8 +45,6 @@ export const MovieDetails = () => {
 
 
   return (
-    <>
-      <MovieDetailContent movie={movie} />
-    </>
+    <MovieDetailContent movie={movie} />
   )
 }
