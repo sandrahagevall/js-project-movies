@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
+
 const PageWrapper = styled.div`
   position: relative;
   min-height: 100vh;
@@ -38,7 +39,7 @@ const Overlay = styled.div`
     to right,
     rgba(0, 0, 0, 0.85) 0%,
     rgba(0, 0, 0, 0.6) 40%,
-    rgba(0, 0, 0, 0.3) 100%,
+    rgba(0, 0, 0, 0.4) 100%,
     rgba(0, 0, 0, 0) 100%
   );
   z-index: 2;

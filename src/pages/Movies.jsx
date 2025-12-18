@@ -3,6 +3,7 @@ import { Loader } from "../components/Loader"
 import { MovieCard } from "../components/MovieCard"
 import styled from "styled-components"
 
+
 const apiKey = import.meta.env.VITE_TMDB_API_KEY
 
 const PopularPage = styled.main`

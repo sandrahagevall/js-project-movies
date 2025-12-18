@@ -64,6 +64,7 @@ A React-based movie discovery application that fetches and displays popular movi
 - Added navigation back to home page using React Router's `Link` component
 
 ### MovieDetails.jsx
+**Implemented features:**
 - Created dynamic movie details page using `UseParams`
 - Implemented state management with `useState` hooks:
   - `movie` - stored fetched movie details data

@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
+
 const NotFoundWrapper = styled.main`
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   color: white;
@@ -53,6 +54,7 @@ const BackButton = styled(Link)`
     box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
   }
 `
+
 
 const NotFound = () => {
   return (
