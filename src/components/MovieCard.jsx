@@ -51,6 +51,7 @@ const MovieImage = styled.img`
   width: 100%;
   height: auto;
   display: block;
+  margin-bottom: 0.2rem;
 `
 
 
