@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 
 const apiKey = import.meta.env.VITE_TMDB_PUBLIC_KEY
+const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
 
 const PopularPage = styled.main`
   display: flex;
@@ -20,9 +21,7 @@ export const Movies = () => {
     setLoading(true)
     setError(null)
 
-    fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
-    )
+    fetch(API_URL)
       .then(response => {
         if (!response.ok) {
           throw new Error(`Failed to fetch movies: ${response.status} ${response.statusText}`)

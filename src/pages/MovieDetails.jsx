@@ -4,6 +4,7 @@ import { MovieDetailContent } from "../components/MovieDetailContent"
 import { Loader } from "../components/Loader"
 import NotFound from "../pages/NotFound"
 
+const apiKey = import.meta.env.VITE_TMDB_PUBLIC_KEY
 
 export const MovieDetails = () => {
   const { id } = useParams()
@@ -11,10 +12,7 @@ export const MovieDetails = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
-  const apiKey = import.meta.env.VITE_TMDB_PUBLIC_KEY
-
   const API_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
-
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
