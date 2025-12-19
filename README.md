@@ -32,7 +32,7 @@ A React-based movie discovery application that fetches and displays popular movi
 - Using `$` prefix in styled-components to avoid React DOM warnings
 - Nested component hover effects without class names in styled-components
 - Used environment variables (`import.meta.env.VITE_TMDB_API_KEY`) for secure API key storage
-- Handled Netlify’s secrets scanning when deploying a Vite frontend by explicitly omitting a public API key from secret detection, since Vite exposes VITE_* variables to the client by design.
+- Fixed an issue with Netlify’s secret scanning when deploying a Vite app by telling it to ignore a public API key, since Vite makes VITE_* variables available in the browser.
 
 ## Work Progress - 
 
