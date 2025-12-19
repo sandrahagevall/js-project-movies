@@ -3,7 +3,6 @@ import { Loader } from "../components/Loader"
 import { MovieCard } from "../components/MovieCard"
 import styled from "styled-components"
 
-
 const apiKey = import.meta.env.VITE_TMDB_PUBLIC_KEY
 const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
 
